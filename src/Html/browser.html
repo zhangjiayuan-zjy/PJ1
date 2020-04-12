@@ -77,6 +77,7 @@
 
                 <div class="select">
                     <select name="" id="select2">
+                        <option value="Filter by country">Filter by country</option>
                         <option value="China">China</option>
                         <option value="Japan">Japan</option>
                         <option value="Italy">Italy</option>
@@ -87,6 +88,7 @@
 
                 <div class="select">
                     <select name="" id="select3">
+                        <option value="Filter by city">Filter by city</option>
                     </select>
                     <div class="replace" id="replace3">Filter by city<i class="iconfont icon-shangxia"></i></div>
                 </div>
@@ -105,25 +107,30 @@
                     r1.innerHTML = value + "<i class='iconfont icon-shangxia'></i>";
                 }
                 select2.onchange = function() {
-
+                   
                     var value = select2.options[select2.selectedIndex].value;
                     r2.innerHTML = value + "<i class='iconfont icon-shangxia'></i>";
                     switch (value) {
+                        case "Filter by country":
+                            select3.innerHTML = "<option value='Filter by city' selected>Filter by city</option>";
+                            break;
                         case "China":
-                            select3.innerHTML = "<option value='Shanghai'>Shanghai</option><option value='Kunming'>Kunming</option><option value='Beijing'>Beijing</option><option value='Yantai'>Yantai</option>";
+                            select3.innerHTML = "<option value='Filter by city' selected>Filter by city</option><option value='Shanghai'>Shanghai</option><option value='Kunming'>Kunming</option><option value='Beijing'>Beijing</option><option value='Yantai'>Yantai</option>";
                             break;
                         case "Japan":
-                            select3.innerHTML = "<option value='Tokyo'>Tokyo</option><option value='Osaka'>Osaka</option><option value='Kamakura'>Kamakura</option>";
+                            select3.innerHTML = "<option value='Filter by city' selected>Filter by city</option><option value='Tokyo'>Tokyo</option><option value='Osaka'>Osaka</option><option value='Kamakura'>Kamakura</option>";
                             break;
                         case "Italy":
-                            select3.innerHTML = "<option value='Roma'>Roma</option><option value='Milan'>Milan</option><option value='Venice'>Venice</option><option value='Florence'>Florence</option>";
+                            select3.innerHTML = "<option value='Filter by city' selected>Filter by city</option><option value='Roma'>Roma</option><option value='Milan'>Milan</option><option value='Venice'>Venice</option><option value='Florence'>Florence</option>";
                             break;
                         case "America":
-                            select3.innerHTML = "<option value='New York'>New York</option><option value='San Francisco'>San Francisco</option><option value='Washington'>Washington</option>";
+                            select3.innerHTML = "<option value='Filter by city' selected>Filter by city</option><option value='New York'>New York</option><option value='San Francisco'>San Francisco</option><option value='Washington'>Washington</option>";
                             break;
                         default:
                             break;
                     }
+                    var value = select3.options[select3.selectedIndex].value;
+                    r3.innerHTML = value + "<i class='iconfont icon-shangxia'></i>";
                 }
                 select3.onchange = function() {
                     var value = select3.options[select3.selectedIndex].value;
