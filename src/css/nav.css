@@ -1,0 +1,63 @@
+nav {
+    width: 100%;
+    font-size: 1.2em;
+    color: whitesmoke;
+    background-color: #333333;
+    height: 2.5em;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav .nav li {
+    line-height: 2.5em;
+    float: left;
+    text-align: center;
+    width: 7%;
+}
+
+nav .nav .selected {
+    background-color: tomato;
+    color: white;
+}
+
+nav .nav li:hover {
+    background-color: tomato;
+    color: white;
+}
+
+nav .nav .acount {
+    width: 10%;
+    float: right;
+    position: relative;
+}
+
+nav .nav .acount ul {
+    display: none;
+}
+
+nav .nav .acount:hover ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0px;
+}
+
+nav .nav .acount:hover ul li {
+    background-color: #6666CC;
+    width: 100%;
+}
+
+nav .nav .acount:hover ul li:hover {
+    background-color: #9999FF;
+    color: white;
+}
+
+nav .iconfont {
+    float: left;
+    margin-left: 2px;
+    font-size: 23px;
+}
